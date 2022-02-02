@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+
+import Navbar from './blocks/Navbar';
+import Menu from './blocks/Menu';
+import Header from './blocks/Header';
+import AboutUs from './blocks/AboutUs/AboutUs';
+import More from './blocks/More';
+import Footer from './blocks/Footer/Footer';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [showMenu, setShowMenu] = useState(false);
+
+    return (
+        <Container showMenu={showMenu}>
+            <Navbar showMenu={showMenu} setShowMenu={setShowMenu} />
+            <Menu showMenu={showMenu} />
+            <Header />
+            <AboutUs />
+            <More />
+            <Footer />
+        </Container>
+    );
 }
+
+const Container = styled.div`
+    position: ${(props) => (props.showMenu ? 'fixed' : 'static')};
+`;
 
 export default App;
