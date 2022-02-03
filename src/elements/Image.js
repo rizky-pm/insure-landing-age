@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Image = styled.img``;
+export const Image = styled.img`
+    @media only screen and (${(props) => props.theme.breakpoints.lDevices}) {
+        display: ${(props) => props.largeDevicesDisplay};
+    }
+`;
 
 export const HeaderImage = styled(Image)`
     width: 100%;

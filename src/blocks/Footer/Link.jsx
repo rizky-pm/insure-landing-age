@@ -1,5 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+
+import { LI } from '../../elements/UnorderedList';
+import { LinkTag } from '../../elements/LinkTag';
 
 const Link = ({ text }) => {
     return (
@@ -8,24 +10,5 @@ const Link = ({ text }) => {
         </LI>
     );
 };
-
-const LI = styled.li`
-    &:first-of-type {
-        margin-top: 40px;
-    }
-
-    &:not(:last-of-type) {
-        margin-bottom: 20px;
-    }
-`;
-
-const LinkTag = styled.a`
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.primaryDarkViolet};
-
-    &:hover {
-        text-decoration: underline;
-    }
-`;
 
 export default Link;

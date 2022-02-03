@@ -12,9 +12,9 @@ export const theme = {
     breakpoints: {
         mobileDevices: 'max-width: 480px',
         tabletDevices: 'min-width: 481px',
-        smallScreenDevices: 'min-width: 769px',
-        largeSecreenDevices: 'min-width: 1025px',
-        extraLargeScreenDevices: 'min-width: 1201px',
+        sDevices: 'min-width: 769px',
+        lDevices: 'min-width: 1025px',
+        xlDevices: 'min-width: 1201px',
     },
 };
 
